@@ -1,9 +1,9 @@
 FROM arm32v7/debian:latest
 
 LABEL org.label-schema.license="GPL-2.0" \
-      org.label-schema.vcs-url="https://github.com/rocker-org/rocker-versioned" \
-      org.label-schema.vendor="Rocker Project" \
-      maintainer="Carl Boettiger <cboettig@ropensci.org>"
+      org.label-schema.vcs-url="https://github.com/JBGruber/rocker-arm" \
+      org.label-schema.vendor="Rocker Project for RaspberryPi" \
+      maintainer="Johannes Gruber <j.gruber.1@research.gla.ac.uk>"
 
 ARG R_VERSION
 ARG BUILD_DATE

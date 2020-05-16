@@ -5,6 +5,7 @@
 VERS=v1.2.5042
 
 # Download RStudio source
+mkdir ~/Downloads/
 cd ~/Downloads/
 wget -O $VERS https://github.com/rstudio/rstudio/tarball/$VERS
 mkdir ~/Downloads/rstudio-$VERS

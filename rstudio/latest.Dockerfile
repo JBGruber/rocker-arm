@@ -30,8 +30,8 @@ RUN apt-get update \
     sudo \
     wget \
   ## download and build RStudio
-  && sudo chmod +x $PATH/build_rstudio.sh
-  && sudo $PATH/build_rstudio.sh
+  && sudo chmod +x $PATH/build_rstudio.sh \
+  && sudo $PATH/build_rstudio.sh \
   ## Symlink pandoc & standard pandoc templates for use system-wide
   && ln -s /usr/lib/rstudio-server/bin/pandoc/pandoc /usr/local/bin \
   && ln -s /usr/lib/rstudio-server/bin/pandoc/pandoc-citeproc /usr/local/bin \

@@ -10,7 +10,7 @@ ARG BUILD_DATE
 ARG CRAN
 ## Setting a BUILD_DATE will set CRAN to the matching MRAN date
 ## No BUILD_DATE means that CRAN will default to latest 
-ENV R_VERSION=${R_VERSION:-4.0.0} \
+ENV R_VERSION=${R_VERSION:-3.6.3} \
     CRAN=${CRAN:-https://cran.rstudio.com} \ 
     LC_ALL=en_US.UTF-8 \
     LANG=en_US.UTF-8 \

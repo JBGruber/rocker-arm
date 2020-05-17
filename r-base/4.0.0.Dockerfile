@@ -53,6 +53,7 @@ RUN apt-get update \
 	&& apt-get install -t experimental -y --no-install-recommends \
 		littler \
                 r-cran-littler \
+                r-cran-rpart \
 		r-base=${R_BASE_VERSION}-* \
 		r-base-dev=${R_BASE_VERSION}-* \
 		r-recommended=${R_BASE_VERSION}-* \

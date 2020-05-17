@@ -1,4 +1,4 @@
-LATEST     := $(shell find . -name \*.Dockerfile | head -n 1)
+LATEST     := $(shell find . -regextype sed -regex ".*/[0-9].*.Dockerfile" | sort -gr | head -n 1)
 
 latest:
 	cp -r $(LATEST) latest.Dockerfile

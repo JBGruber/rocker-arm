@@ -8,7 +8,7 @@ ENV S6_VERSION=${S6_VERSION:-v1.21.7.0}
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
 ENV PATH=/usr/lib/rstudio-server/bin:$PATH
 ENV PANDOC_TEMPLATES_VERSION=${PANDOC_TEMPLATES_VERSION:-2.9}
-COPY build_rstudio.sh $PATH
+COPY build_rstudio.sh /home/
 
 ## Download and install RStudio server & dependencies
 ## Attempts to get detect latest version, otherwise falls back to version given in $VER
@@ -30,8 +30,8 @@ RUN apt-get update \
     sudo \
     wget \
   ## download and build RStudio
-  && sudo chmod +x $PATH/build_rstudio.sh \
-  && sudo $PATH/build_rstudio.sh \
+  && sudo chmod +x /home/build_rstudio.sh \
+  && sudo /home/build_rstudio.sh \
   ## Symlink pandoc & standard pandoc templates for use system-wide
   && ln -s /usr/lib/rstudio-server/bin/pandoc/pandoc /usr/local/bin \
   && ln -s /usr/lib/rstudio-server/bin/pandoc/pandoc-citeproc /usr/local/bin \
